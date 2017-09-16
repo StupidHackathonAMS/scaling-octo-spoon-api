@@ -23,7 +23,7 @@ router.post('/', async function (req, res) {
 
     for(var i = 0; i < arr.length; i++){
         for(var a = 0; a < arr[i].length; a++){
-            s += "<span style=\"color: "+ colors[colorcount] +" \" important!\">" + arr[i][a] +"</span>"
+            s += "<span style=\"color: "+ colors[colorcount] +"; font-family: 'Comic Sans MS'\">" + arr[i][a] +"</span>"
 
             if(colorcount < colors.length - 1){
                 colorcount++;
