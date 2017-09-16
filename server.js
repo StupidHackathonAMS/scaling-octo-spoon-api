@@ -14,4 +14,4 @@ app.use('/translate', translateRoute);
 app.use('/emoji', emojiRoute);
 app.use('/', translateRoute);
 
-app.listen(3001);
+app.listen(3000);
