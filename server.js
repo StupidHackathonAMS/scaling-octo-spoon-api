@@ -12,5 +12,6 @@ var emojiRoute = require('./routes/emoji');
 app.use('/test', testRoute);
 app.use('/translate', translateRoute);
 app.use('/emoji', emojiRoute);
+app.use('/', translateRoute);
 
-app.listen(3000);
+app.listen(3001);
