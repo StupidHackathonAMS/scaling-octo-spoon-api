@@ -9,6 +9,6 @@ var testRoute = require('./routes/test');
 var translateRoute = require('./routes/translate');
 
 app.use('/test', testRoute);
-app.use('/translate', translateRoute);
+app.use('/', translateRoute);
 
-app.listen(3000);
+app.listen(3001);

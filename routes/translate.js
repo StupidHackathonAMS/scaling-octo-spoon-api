@@ -3,22 +3,18 @@ var translate = require('google-translate-api');
 
 var router = express.Router();
 
+function randomI(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function reverse(s){
+    return s.split("").reverse().join("");
+}
 router.get('/', function (req, res) {
-    //
-    // api.translate({
-    //     source: 'en',
-    //     target:'zh-TW',
-    //     text:'How the Kim dynasty has shaped North Korea'
-    // }, function(err,translation){
-    //
-    //     console.log(translation);
-    //     res.send("test")
-    //     // translation is a string representing the output translation
-    //     // original response would be in html, this client converts the html to a proper text string
-    // });
+    res.send("fuck you");
 });
 
-router.post('/', function (req, res) {
+router.post('/translate', function (req, res) {
     var cookie = req.body.cookie;
 
     //1
@@ -54,7 +50,6 @@ router.post('/', function (req, res) {
                                                                         translate(data.text, {to: iso})
                                                                             .then(function(data){
                                                                                 res.json({cookie: data.text})
-
                                                                             }).catch(function(err) {
                                                                             console.error(err);
                                                                         });
@@ -88,6 +83,24 @@ router.post('/', function (req, res) {
     });
 });
 
+router.post('/reverse', function (req, res) {
+    var cookie = req.body.cookie;
+    var arr = cookie.split(" ");
+    var s = "";
+    var r = randomI(1, arr.length);
 
+
+    for(var i = 0; i < arr.length; i++){
+        if(i % r === 0){
+            arr[i] = reverse(arr[i] )
+        }
+
+        s += arr[i] + " ";
+    }
+
+
+
+    res.json({cookie: s})
+});
 
 module.exports = router;
