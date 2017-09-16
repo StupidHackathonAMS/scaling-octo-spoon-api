@@ -14,8 +14,13 @@ router.get('/', function (req, res) {
     res.send("fuck you");
 });
 
+var koekjestrommel = {};
+
 router.post('/translate', function (req, res) {
     var cookie = req.body.cookie;
+
+    if(koekjestrommel.hasOwnProperty(cookie))
+        return koekjestrommel[cookie];
 
     //1
     translate(cookie, {to: 'zh-TW'})
@@ -49,6 +54,7 @@ router.post('/translate', function (req, res) {
                                                                         // 10
                                                                         translate(data.text, {to: iso})
                                                                             .then(function(data){
+                                                                                koekjestrommel[cookie] = data.text;
                                                                                 res.json({cookie: data.text})
                                                                             }).catch(function(err) {
                                                                             console.error(err);
