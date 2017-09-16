@@ -5,9 +5,10 @@ var app = express();
 
 app.use(parser.json());
 
-// var testRoute = require('./routes/test');
+var testRoute = require('./routes/test');
 var translateRoute = require('./routes/translate');
 
+app.use('/test', testRoute);
 app.use('/translate', translateRoute);
 
 app.listen(3000);
