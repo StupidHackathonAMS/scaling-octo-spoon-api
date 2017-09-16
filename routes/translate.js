@@ -89,7 +89,6 @@ router.post('/reverse', function (req, res) {
     var s = "";
     var r = randomI(1, arr.length);
 
-
     for(var i = 0; i < arr.length; i++){
         if(i % r === 0){
             arr[i] = reverse(arr[i] )
@@ -97,9 +96,6 @@ router.post('/reverse', function (req, res) {
 
         s += arr[i] + " ";
     }
-
-
-
     res.json({cookie: s})
 });
 

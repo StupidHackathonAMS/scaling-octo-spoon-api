@@ -7,7 +7,8 @@
     "body-parser": "^1.18.1",
     "express": "^4.15.4",
     "google-translate-api": "^2.3.0",
-    "google-translate-api-nodejs-client": "^1.5.0"
+    "google-translate-api-nodejs-client": "^1.5.0",
+    "mongoose": "^4.11.11"
   },
   "devDependencies": {},
   "scripts": {

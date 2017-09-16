@@ -1,6 +1,6 @@
-var express = require('express');
-
 var emojiindex = require('./emojindex');
+
+var express = require('express');
 
 var emojidick = [
     ["good", "thumbsup"],
