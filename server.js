@@ -13,11 +13,13 @@ var testRoute = require('./routes/test');
 var translateRoute = require('./routes/translate');
 var emojiRoute = require('./routes/emoji');
 var wordRoute = require('./routes/wordRoute');
+var rainbowRoute = require('./routes/rainbow');
 
 app.use('/test', testRoute);
 app.use('/translate', translateRoute);
 app.use('/emoji', emojiRoute);
 app.use('/', translateRoute);
 app.use('/word', wordRoute);
+app.use('/rainbow', rainbowRoute);
 
 app.listen(3000);

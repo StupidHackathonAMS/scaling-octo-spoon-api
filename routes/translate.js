@@ -21,7 +21,7 @@ router.post('/translate', function (req, res) {
     translate(cookie, {to: 'zh-TW'})
     .then(function(data){
         var iso = data.from.language.iso;
-        console.log(iso);
+        // console.log(iso);
         // 2
         translate(data.text, {to: 'eu'})
             .then(function(data){

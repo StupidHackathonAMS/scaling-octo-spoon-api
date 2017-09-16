@@ -15,24 +15,13 @@ router.get('/', function (req, res) {
 
 router.post('/', async function (req, res) {
     var cookie = req.body.cookie;
-    // var arr = cookie.split(" ");
-    // var s = "";
 
-    // for(var i = 0; i < arr.length; i++){
+    var data = await word.find({}).exec(); //, function (err, data) {
 
-        var data = await word.find({}).exec(); //, function (err, data) {
+    data.forEach(function (item){
+        cookie = cookie.replace(item.in, item.out)
+    });
 
-        data.forEach(function (item){
-            cookie = cookie.replace(item.in, item.out)
-        });
-
-        // if(data[0]){
-        //     console.log(data[0]);
-        //     arr[i] = data[0].out;
-        // }
-
-        // s += arr[i] + " ";
-    // }
     res.json({cookie: cookie});
 });
 
