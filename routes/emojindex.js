@@ -1511,4 +1511,5 @@ module.exports = {
     "whitedude": "http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-person-with-blond-hair.png",
     "twitter": "https://www.sketchappsources.com/resources/source-image/twitterlogo_1x.png",
     "muslima": "http://i2.mirror.co.uk/incoming/article9240954.ece/ALTERNATES/s615/Unicode-release-Hijab-and-Breastfeeding-emoji.jpg",
+    "calculator": "https://i.pinimg.com/originals/a9/b0/71/a9b071d433ed6aa36de270f7b2005d93.jpg",
 }

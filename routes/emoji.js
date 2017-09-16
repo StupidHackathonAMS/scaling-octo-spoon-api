@@ -19,6 +19,7 @@ var emojidick = [
     ["Friday", "fried_egg birthday"],
     ["white supremacists ", "whitedude"],
     ["tweet", "twitter"],
+    ["Tweet", "twitter"],
     ["Bomb", "bomb"],
     ["morning", "sunrise"],
     ["ground", "earth_africa"],
@@ -28,6 +29,12 @@ var emojidick = [
     ["wrote", "pencil"],
     ["ban", "crossed_swords"],
     ["scene", "framed_picture"],
+    ["seemed", "eyes"],
+    ["calculated", "calculator"],
+    ["playing", "video_game"],
+    ["Anger", "angry"],
+    ["British", "uk"],
+    [" and ", " heavy_plus_sign "],
 
 ];
 var router = express.Router();
